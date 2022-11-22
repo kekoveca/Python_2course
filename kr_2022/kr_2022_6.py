@@ -1,4 +1,6 @@
 import statistics
+import random
+print(random.randint(1,2))
 
 N = int(input())
 arr = []

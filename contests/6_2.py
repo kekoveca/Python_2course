@@ -1,19 +1,20 @@
 class Garage:
-    # Конструктор и деструктор, если нужны
     def __init__(self):
-        pass
-
-    # Запарковать машину v
+        self.data = []
     def park(self, v):
-        pass
-    # Пересчитать машины заданного типа t.
-    # Вернуть количество.
+        self.data.append(v)
     def count(self, t):
-        pass
-    # Получить самую быструю машину заданного типа t.
-    # Вернуть экземпляр.
+        k = 0 
+        for el in self.data:
+            if isinstance(el, t):
+                k += 1
+        return k
     def get_fastest_of_type(self, t):
-        pass
+        m = None
+        for el in self.data:
+            if isinstance(el, t) and (m is None or m.speed < el.speed):
+                m = el
+        return m
 
 
 # Базовый класс машины
